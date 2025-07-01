@@ -36,8 +36,8 @@ export enum IFeedbackStatus {
 }
 
 export enum IRoleType {
-  admin = "ROLE_ADMIN",
   user = "ROLE_USER",
+  admin = "ROLE_ADMIN",
   superAdmin = 'ROLE_SUPER_ADMIN'
 }
 
@@ -49,21 +49,6 @@ export interface IRole {
   updatedAt: string;
 }
 
-export interface IGame {
-  id?: number;
-  name?: string;
-  imgURL?: string;
-  status?: string;
-  description?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-export interface IOrder {
-  id?: number;
-  description?: string;
-  total?: number;
-}
 
 export interface ISearch {
   page?: number;
