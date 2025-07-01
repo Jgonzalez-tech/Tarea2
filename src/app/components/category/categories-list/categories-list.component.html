@@ -6,19 +6,15 @@
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripcion</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Stock</th>
             <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        @for (item of products; track $index) {
+        @for (item of categories; track $index) {
         <tr>
             <th scope="row">{{item.id}}</th>
             <td>{{item.name}}</td>
             <td>{{item.description}}</td>
-            <td>{{item.price}}</td>
-            <td>{{item.stockAmount}}</td>
             @if (allowActions) {
             <td>
                 <button (click)="callModalAction.emit(item);" class="btn btn-warning me-2" type="button"><i
@@ -36,7 +32,7 @@
         <tr>
             <td colspan="4">
                 <div class="d-flex justify-content-center align-items-center w-100">
-                    <p class="mb-0">No hay productos</p>
+                    <p class="mb-0">No hay categorias</p>
                 </div>
             </td>
         </tr>
